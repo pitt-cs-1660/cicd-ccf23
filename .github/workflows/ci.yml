@@ -95,4 +95,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: northamerica-northeast1-docker.pkg.dev/cc-spring2025/dansc0de/fastapi-server:v2
+          tags: northamerica-northeast1-docker.pkg.dev/sodium-inkwell-451800-r1/dockerartifactrepository
