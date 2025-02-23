@@ -76,7 +76,7 @@ jobs:
         id: auth
         with:
           project_id: 'sodium-inkwell-451800-r1' # update with your project ID
-          workload_identity_provider: 'projects/103921030934/locations/global/workloadIdentityPools/github' # update with your Workload Identity Pool
+          workload_identity_provider: 'projects/103921030934/locations/global/workloadIdentityPools/github/providers/my-repo' # update with your Workload Identity Pool
 
       # configure/login with docker
       - name: gcloud Configure Docker
