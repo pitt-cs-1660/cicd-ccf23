@@ -67,9 +67,9 @@ jobs:
       - integration-test
     steps:
       # checkout code
-      # - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-#      # authenticate with GCP with workload identity provider
+     # authenticate with GCP with workload identity provider
      - uses: 'google-github-actions/auth@v2'
        id: auth
        name: Authenticate to GCP
@@ -77,21 +77,21 @@ jobs:
          project_id: 'sodium-inkwell-451800-r1' # update with your project ID
          workload_identity_provider: 'projects/103921030934/locations/global/workloadIdentityPools/github' # update with your Workload Identity Pool
 
-#      # configure/login with docker
-#      - name: gcloud Configure Docker
-#        run: gcloud auth configure-docker [YOUR REGION e.g. us-central1]-docker.pkg.dev
+     # configure/login with docker
+     - name: gcloud Configure Docker
+       run: gcloud auth configure-docker northamerica-northeast1-docker.pkg.dev
 
-#      # setup docker buildx
-#      - name: Setup docker buildx
-#        uses: docker/setup-buildx-action@v3
-#        with:
-#          platforms: linux/amd64,linux/arm64
+     # setup docker buildx
+     - name: Setup docker buildx
+       uses: docker/setup-buildx-action@v3
+       with:
+         platforms: linux/amd64,linux/arm64
 
-#      # build and push the image
-#      - name: Build and Push
-#        uses: docker/build-push-action@v6
-#        with:
-#          context: ./
-#          file: ./Dockerfile
-#          push: true
-#          tags: [YOUR REGION e.g. us-central1]-docker.pkg.dev/cc-spring2025/dansc0de/fastapi-server:v2
+     # build and push the image
+     - name: Build and Push
+       uses: docker/build-push-action@v6
+       with:
+         context: ./
+         file: ./Dockerfile
+         push: true
+         tags: northamerica-northeast1-docker.pkg.dev/cc-spring2025/dansc0de/fastapi-server:v2
