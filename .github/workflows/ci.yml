@@ -95,4 +95,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: northamerica-northeast1-docker.pkg.dev/sodium-inkwell-451800-r1/dockerartifactrepository/cicd-ccf23-fastapi:v1
+          tags: northamerica-northeast1-docker.pkg.dev/sodium-inkwell-451800-r1/dockerartifactrepository/app:v1
